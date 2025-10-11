@@ -1,0 +1,56 @@
+
+import React from 'react';
+import { createBrowserRouter } from "react-router";
+import Root from '../pages/Root/Root';
+import ErrorPage from '../pages/ErrorPage/ErrorPage';
+import AppErrorPage from '../Pages/AppError/AppError.jsx';
+
+import Home from '../pages/Home/Home';
+import Apps from '../pages/Apps/Apps';
+import InstalledApps from '../pages/InstalledApps/InstalledApps';
+import AppDetails from "../Pages/AppDetails/AppDetails.jsx";
+
+export const router = createBrowserRouter([
+    {
+        path: "/",
+        Component: Root,
+       //errorElement: <ErrorPage/>   
+        children: [
+            
+            {
+                index: true,
+                path: "/",
+                Component: Home,
+				loader:() =>fetch("appsData.json"),
+            },
+
+            
+            {
+                path: "/all-apps",
+                Component: Apps,
+                loader: () => fetch('appsData.json'),
+            },
+
+            
+            {
+                path: "/installation",
+                Component: InstalledApps,
+                loader: () => fetch('./appsData.json'),
+            },
+
+            
+            {
+                path: "/app/:id",
+                Component: AppDetails,
+                loader: () => fetch('/appsData.json'),
+                errorElement: <AppErrorPage />, 
+            },
+
+            
+            {
+                path: "*",
+                Component: ErrorPage,
+            }
+        ]
+    }
+]);

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useLoaderData } from "react-router-dom";
-import { getInstalledApps, addInstalledApp, removeInstalledApp } from "../../Utility/installedAppsDB";
+import { getInstalledApps, addInstalledApp, removeInstalledApp } from "../../Utility/installedAppsDB.js";
 import InstalledAppCard from "../InstalledAppCard/InstalledAppCard.jsx";
 
 const InstalledApps = () => {

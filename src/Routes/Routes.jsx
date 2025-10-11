@@ -5,9 +5,9 @@ import Root from '../pages/Root/Root';
 import ErrorPage from '../pages/ErrorPage/ErrorPage';
 import AppErrorPage from '../Pages/AppError/AppError.jsx';
 
-import Home from '../pages/Home/Home';
+import Home from "../Pages/Home/Home.jsx";
 import Apps from '../pages/Apps/Apps';
-import InstalledApps from '../pages/InstalledApps/InstalledApps';
+import InstalledApps from '../Pages/InstalledApps/InstalledApps.jsx';
 import AppDetails from "../Pages/AppDetails/AppDetails.jsx";
 
 export const router = createBrowserRouter([

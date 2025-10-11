@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "image": "./assets/demo-app (1).webp",
+    "image": "../src/assets/demo-app (1).webp",
     "title": "PhotoMaster - Edit Like Professional",
     "companyName": "PixelCraft Labs",
     "description": "PhotoMaster offers advanced photo editing tools in an intuitive interface, making it perfect for both beginners and professionals. Users can apply filters, adjust brightness, contrast, and saturation with precision. The app supports layers, text overlays, and creative stickers to enhance images. AI-powered auto-correction instantly improves photo quality. You can save and share edited images directly to social media platforms. Templates and presets speed up the editing process for frequent tasks.\n\nAdditionally, PhotoMaster allows batch editing of multiple photos at once. Projects can be organized into albums for easy access and retrieval. Regular updates introduce new effects and creative tools. Users can track edits with a detailed history and undo changes easily. Overall, PhotoMaster combines simplicity and power for all your photo editing needs.",

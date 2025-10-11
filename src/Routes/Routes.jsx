@@ -3,7 +3,7 @@ import React from 'react';
 import { createBrowserRouter } from "react-router";
 import Root from '../pages/Root/Root';
 import ErrorPage from '../pages/ErrorPage/ErrorPage';
-import AppErrorPage from '../Pages/AppError/AppError.jsx';
+import AppError from '../Pages/AppError/AppError.jsx';
 
 import Home from "../Pages/Home/Home.jsx";
 import Apps from '../pages/Apps/Apps';
@@ -43,7 +43,7 @@ export const router = createBrowserRouter([
                 path: "/app/:id",
                 Component: AppDetails,
                 loader: () => fetch('/appsData.json'),
-                errorElement: <AppErrorPage />, 
+                errorElement: <AppError />, 
             },
 
             

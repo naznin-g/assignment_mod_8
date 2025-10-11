@@ -1,12 +1,10 @@
-
 import React from 'react';
 import { createBrowserRouter } from "react-router";
-import Root from '../pages/Root/Root.jsx';
-import ErrorPage from '../pages/ErrorPage/ErrorPage.jsx';
+import Root from "../Pages/Root/Root.jsx"; 
+import ErrorPage from '../Pages/ErrorPage/ErrorPage.jsx';
 import AppError from '../Pages/AppError/AppError.jsx';
-
 import Home from "../Pages/Home/Home.jsx";
-import Apps from '../pages/Apps/Apps.jsx';
+import Apps from '../Pages/Apps/Apps.jsx';
 import InstalledApps from '../Pages/InstalledApps/InstalledApps.jsx';
 import AppDetails from "../Pages/AppDetails/AppDetails.jsx";
 

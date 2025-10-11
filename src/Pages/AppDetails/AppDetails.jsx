@@ -4,6 +4,7 @@ import { getInstalledApps, addInstalledApp, removeInstalledApp } from "../../uti
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid, ResponsiveContainer } from "recharts";
+import Loader from "../../components/Loader/Loader.jsx"
 import downloadIcon from "../../assets/icon-downloads.png";
 import avgRatingIcon from "../../assets/icon-ratings.png";
 import reviewIcon from "../../assets/icon-review.png";
@@ -18,7 +19,7 @@ const AppDetails = () => {
   useEffect(() => {
     const fetchAppData = async () => {
       try {
-        const res = await fetch("/data/appsData.json");
+        const res = await fetch("/appsData.json");
         const data = await res.json();
         const selectedApp = data.find((a) => a.id === parseInt(id));
         setApp(selectedApp);
@@ -40,7 +41,7 @@ const AppDetails = () => {
     }
   }, [app]);
 
-  if (isLoading) return <p className="text-center mt-10">Loading...</p>;
+  if (isLoading) return <p className="text-center mt-10"><Loader/></p>;
   if (!app) return <p className="text-center mt-10 text-red-500">App not found</p>;
 
   const { title, image, companyName, downloads, ratingAvg, reviews, size, description, ratings } = app;
@@ -95,8 +96,8 @@ const AppDetails = () => {
               <img src={reviewIcon} alt="reviews" className="w-5 h-5" />
               <span>{reviews} Reviews</span>
             </div>
-            <span className="text-sm text-gray-500">Size: {size}</span>
-          </div>
+            </div>
+
 
           {/* Buttons */}
           <div className="mt-4">
@@ -105,7 +106,7 @@ const AppDetails = () => {
                 onClick={handleInstall}
                 className="bg-green-600 hover:bg-green-700 text-white px-5 py-2 rounded-lg transition"
               >
-                Install Now
+                Install Now {size} MB
               </button>
             ) : (
               <button

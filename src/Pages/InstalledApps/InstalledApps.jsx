@@ -1,66 +1,62 @@
 import React, { useState, useEffect } from "react";
 import { useLoaderData } from "react-router-dom";
 import { getInstalledApps, addInstalledApp, removeInstalledApp } from "../../utility/installedAppsDB";
-import InstalledAppCard from "../InstalledAppCard/InstalledAppCard.jsx"
+import InstalledAppCard from "../InstalledAppCard/InstalledAppCard.jsx";
 
 const InstalledApps = () => {
   const allApps = useLoaderData(); // preloaded via loader
-  const [apps, setApps] = useState([]);
+  const [installedApps, setInstalledApps] = useState([]);
   const [sortType, setSortType] = useState("");
 
-  useEffect(() => {
-    loadApps();
-  }, [allApps]);
-
-  // Load apps and mark installed state
-  const loadApps = () => {
+  // Load only installed apps and mark installed state
+  const loadInstalledApps = () => {
     const installedIds = getInstalledApps().map(id => parseInt(id));
-    const appsWithState = allApps.map(app => ({
-      ...app,
-      isInstalled: installedIds.includes(app.id),
-    }));
-    setApps(appsWithState);
+    const filtered = allApps
+      .filter(app => installedIds.includes(app.id))
+      .map(app => ({ ...app, isInstalled: true })); // mark as installed
+    setInstalledApps(filtered);
   };
+
+  useEffect(() => {
+    loadInstalledApps();
+  }, [allApps]);
 
   // Install an app
   const handleInstall = (id) => {
     addInstalledApp(id);
-    setApps(prev =>
-      prev.map(app => (app.id === id ? { ...app, isInstalled: true } : app))
-    );
+    loadInstalledApps(); // refresh list
   };
 
   // Uninstall an app
   const handleUninstall = (id) => {
     removeInstalledApp(id);
-    setApps(prev =>
-      prev.map(app => (app.id === id ? { ...app, isInstalled: false } : app))
-    );
+    loadInstalledApps(); // refresh list
   };
 
-  // Sort apps
+  // Sort installed apps
   const handleSort = (type) => {
     setSortType(type);
-    let sorted = [...apps];
+    let sorted = [...installedApps];
     if (type === "size") sorted.sort((a, b) => a.size - b.size);
     if (type === "downloads") sorted.sort((a, b) => b.downloads - a.downloads);
-    setApps(sorted);
+    setInstalledApps(sorted);
   };
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-8">
       {/* Title section */}
       <div className="text-center mb-8">
-        <h1 className="text-4xl font-extrabold text-gray-800">Your Apps</h1>
+        <h1 className="text-4xl font-extrabold text-gray-800">Your Installed Apps</h1>
         <p className="text-lg text-gray-500 mt-2">
-          Explore all trending apps on the market developed by us
+          Explore all Trending Apps on the Market Developed by us.
+          
         </p>
       </div>
 
-      {/* Header: total apps + sort */}
+      {/* Header: total installed apps + sort */}
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-xl font-semibold text-gray-700">
-          {apps.length} Apps Found
+          {installedApps.length} Apps Found
         </h2>
 
         <select
@@ -74,12 +70,12 @@ const InstalledApps = () => {
         </select>
       </div>
 
-      {/* App list */}
-      {apps.length === 0 ? (
-        <p className="text-center text-gray-500">No apps available</p>
+      {/* Installed apps list */}
+      {installedApps.length === 0 ? (
+        <p className="text-center text-gray-500">No apps installed</p>
       ) : (
         <div className="flex flex-col gap-4">
-          {apps.map(app => (
+          {installedApps.map(app => (
             <InstalledAppCard
               key={app.id}
               app={app}

@@ -33,10 +33,9 @@ const Apps = () => {
   return (
     <div className="p-6">
       {/* Heading + Paragraph */}
-      <h1 className="text-3xl font-bold text-center mb-2">Our Apps</h1>
+      <h1 className="text-3xl font-bold text-center mb-2">Our All Applications</h1>
       <p className="text-center text-gray-600 mb-4">
-        Explore our collection of useful apps. Find apps that suit your needs
-        and discover new favorites!
+        Explore All Apps in the Market Developed by us. We code for Millions!
       </p>
 
       {/* Number of apps and search */}
@@ -51,8 +50,8 @@ const Apps = () => {
         />
       </div>
 
-      {/* App cards grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
         {Array.isArray(filteredApps) &&
           filteredApps.map((app) => <AppCard key={app.id} app={app} />)}
       </div>

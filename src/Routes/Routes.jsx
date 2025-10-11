@@ -21,21 +21,21 @@ export const router = createBrowserRouter([
                 index: true,
                 path: "/",
                 Component: Home,
-				loader:() =>fetch("appsData.json"),
+				loader:() =>fetch("/appsData.json"),
             },
 
             
             {
                 path: "/all-apps",
                 Component: Apps,
-                loader: () => fetch('appsData.json'),
+                loader: () => fetch('/appsData.json'),
             },
 
             
             {
                 path: "/installation",
                 Component: InstalledApps,
-                loader: () => fetch('./appsData.json'),
+                loader: () => fetch('/appsData.json'),
             },
 
             

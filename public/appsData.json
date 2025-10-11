@@ -19,7 +19,7 @@
   },
   {
     "id": 2,
-    "image": "./assets/demo-app (2).webp",
+    "image": "../src/assets/demo-app (2).webp",
     "title": "TaskHero - Organize Your Day",
     "companyName": "OrganizeIt Co",
     "description": "TaskHero helps users plan and organize their daily tasks efficiently. You can create tasks, set priorities, and assign deadlines with ease. The app provides visual timelines and progress charts to track productivity. Reminders and notifications ensure no important task is missed. The interface is clean and simple to navigate for all users. Integration with calendars and email improves planning efficiency.\n\nTaskHero also supports collaboration with teams and family. Shared tasks and projects keep everyone updated in real time. Custom tags and labels make categorizing tasks simple. Analytics help identify time-wasting activities. Overall, TaskHero is perfect for personal and professional task management.",
@@ -37,7 +37,7 @@
   },
   {
     "id": 3,
-    "image": "./assets/demo-app (3).webp",
+    "image": "../src/assets/demo-app (3).webp",
     "title": "FitTrack - Monitor Your Health",
     "companyName": "HealthSync Inc",
     "description": "FitTrack allows users to track their fitness and health efficiently. The app monitors steps, calories, distance, and heart rate in real time. Personalized workout plans adapt to fitness goals. Users can log meals and hydration for a complete overview. Notifications and reminders help maintain consistency. Progress charts visualize improvements over time.\n\nFitTrack integrates with wearables for accurate tracking. Social features allow sharing achievements with friends for motivation. Badges and challenges make workouts fun. Detailed analytics provide insights into performance. Overall, FitTrack is ideal for anyone aiming to stay healthy and active.",
@@ -55,7 +55,7 @@
   },
   {
     "id": 4,
-    "image": "./assets/demo-app (4).webp",
+    "image": "../src/assets/demo-app (4).webp",
     "title": "BudgetWise - Manage Finances Smartly",
     "companyName": "FinanceSmart Ltd",
     "description": "BudgetWise helps users track and manage their finances efficiently. You can set monthly budgets, monitor spending, and plan savings goals. Automatic categorization keeps transactions organized. Alerts notify when you are close to budget limits. Users can view detailed charts and reports to understand spending patterns. Multi-currency support allows international use.\n\nThe app supports exporting financial data for accounting purposes. Cloud synchronization ensures access on multiple devices. Custom tags and categories simplify expense tracking. Notifications remind you of bill payments and goals. Overall, BudgetWise is ideal for personal finance management.",
@@ -73,7 +73,7 @@
   },
   {
     "id": 5,
-    "image": "./assets/demo-app (5).webp",
+    "image": "../src/assets/demo-app (5).webp",
     "title": "TravelMate - Plan Adventures Easily",
     "companyName": "Wanderlust Co",
     "description": "TravelMate guides users to explore new destinations with curated itineraries and recommendations. Offline maps ensure navigation without internet connectivity. Users can save favorite locations and track visited spots. Alerts notify about travel deals, events, and local updates. The app provides tips for restaurants, attractions, and hidden gems. Photos and reviews help plan an enjoyable trip.\n\nTravelMate also allows sharing travel experiences with friends. Multi-language support enables global travelers to use the app. Custom trip planners help organize vacations efficiently. Statistics track distance, time, and spending during trips. Overall, TravelMate enhances every travel experience.",
@@ -91,7 +91,7 @@
   },
   {
     "id": 6,
-    "image": "./assets/demo-app (6).webp",
+    "image": "../src/assets/demo-app (6).webp",
     "title": "LinguaLearn - Master New Languages",
     "companyName": "LinguaTech Ltd",
     "description": "LinguaLearn helps users learn new languages through interactive lessons, quizzes, and exercises. Speech recognition aids pronunciation and speaking skills. Vocabulary and grammar exercises strengthen foundations. Progress tracking shows improvements and areas to focus on. Daily reminders encourage consistent practice. Gamification keeps learners motivated and engaged.\n\nThe app also allows conversation practice with native speakers. Multiple languages can be learned at the same time. Customizable lesson plans adapt to individual learning speed. Analytics provide insight into performance and progress. Overall, LinguaLearn is ideal for language enthusiasts of all levels.",
@@ -109,7 +109,7 @@
   },
   {
     "id": 7,
-    "image": "./assets/demo-app (1).webp",
+    "image": "../src/assets/demo-app (1).webp",
     "title": "MusicFlow - Play Songs Smoothly",
     "companyName": "SoundWave Inc",
     "description": "MusicFlow provides high-quality audio playback with playlists, shuffle, and repeat options. Equalizer settings allow users to customize the sound to their liking. Offline mode ensures music is available without an internet connection. Album art and lyrics enhance the listening experience. Smart recommendations suggest songs based on preferences. Users can create and share playlists with friends.\n\nThe app also integrates with popular streaming services for a seamless experience. Cross-device syncing keeps playlists updated. Notifications inform about new releases from favorite artists. Regular updates introduce new features and sound effects. Overall, MusicFlow is perfect for music lovers of all levels.",
@@ -127,7 +127,7 @@
   },
   {
     "id": 8,
-    "image": "./assets/demo-app (2).webp",
+    "image": "../src/assets/demo-app (2).webp",
     "title": "RecipeBook - Cook Like Chef",
     "companyName": "ChefTech Labs",
     "description": "RecipeBook offers thousands of recipes from around the world with step-by-step instructions. Users can search by ingredients, cuisine, or meal type. Video tutorials provide additional guidance. Meal planners and shopping lists help organize cooking efficiently. Favorites and bookmarks make accessing recipes easy. Nutrition information allows healthier meal choices.\n\nThe app also supports sharing recipes with friends and family. Offline mode ensures recipes are accessible anytime. Custom categories help organize meals for daily planning. Notifications remind users of planned cooking sessions. Overall, RecipeBook is perfect for culinary enthusiasts.",
@@ -145,7 +145,7 @@
   },
   {
     "id": 9,
-    "image": "./assets/demo-app (3).webp",
+    "image": "../src/assets/demo-app (3).webp",
     "title": "WeatherPro - Accurate Forecasts Daily",
     "companyName": "ClimateTech Inc",
     "description": "WeatherPro provides accurate, real-time weather updates for any location. Hourly, daily, and weekly forecasts are available. Severe weather alerts keep users safe. Radar maps and precipitation predictions allow detailed tracking. Widgets give quick access to weather information. The interface is clear and user-friendly.\n\nMultiple locations can be monitored simultaneously. Graphs and charts show trends over time. Notifications inform users of important weather changes. Historical data helps plan activities. Overall, WeatherPro is reliable for staying informed and prepared.",
@@ -163,7 +163,7 @@
   },
   {
     "id": 10,
-    "image": "./assets/demo-app (4).webp",
+    "image": "../src/assets/demo-app (4).webp",
     "title": "MeditationGuide - Relax Mind Daily",
     "companyName": "CalmMind Co",
     "description": "MeditationGuide helps users reduce stress and improve focus through guided meditation. Ambient sounds and music enhance relaxation. Daily reminders encourage consistent practice. Progress tracking shows improvements over time. Breathing exercises and sleep aids complement meditation routines. Sessions can be customized by duration.\n\nCommunity features allow sharing tips and experiences. Achievements and badges motivate continued use. The app supports multiple meditation styles for beginners and experts. Analytics provide insight into progress and areas for improvement. Overall, MeditationGuide promotes mindfulness and well-being.",
@@ -181,7 +181,7 @@
   },
   {
     "id": 11,
-    "image": "./assets/demo-app (5).webp",
+    "image": "../src/assets/demo-app (5).webp",
     "title": "StudyHelper - Learn Smarter Faster",
     "companyName": "EduTech Labs",
     "description": "StudyHelper provides tools for efficient learning and exam preparation. Users can take practice tests, create notes, and review concepts. Flashcards and quizzes make studying interactive. Personalized recommendations guide learning paths. Progress tracking shows strengths and weaknesses. Notifications remind students of upcoming exams or tasks.\n\nDiscussion forums and study groups encourage collaboration. Analytics provide insights into study performance. Multi-device sync ensures access anywhere. Custom study plans adapt to learning speed. Overall, StudyHelper is ideal for students of all levels.",
@@ -199,7 +199,7 @@
   },
   {
     "id": 12,
-    "image": "./assets/demo-app (6).webp",
+    "image": "../src/assets/demo-app (6).webp",
     "title": "NotesPlus - Capture Ideas Instantly",
     "companyName": "AlphaTech Solutions",
     "description": "NotesPlus helps users capture ideas and organize them quickly. You can create, edit, and categorize notes seamlessly. Cloud sync ensures notes are available across devices. Attach images, links, and files for better context. Powerful search allows finding notes in seconds. Security features encrypt your notes for privacy.\n\nCollaborative features allow sharing notes with colleagues and friends. Custom themes and layouts improve usability. Daily reminders ensure tasks and ideas are followed up. Regular updates bring new tools and functionalities. Overall, NotesPlus is perfect for productivity enthusiasts.",

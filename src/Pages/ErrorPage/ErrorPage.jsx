@@ -11,9 +11,9 @@ const ErrorPage = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-5">
       <img src={errorPage} alt="Page Not Found" className="max-w-sm w-full mb-5" />
-      <h1 className="text-3xl font-bold text-gray-800 mb-2">404 - Page Not Found</h1>
+      <h1 className="text-3xl font-bold text-gray-800 mb-2">Oops, Page Not Found!</h1>
       <p className="text-gray-600 text-center mb-5">
-        Oops! The page you are looking for does not exist.
+        The page you are looking for is not available.
       </p>
       <button
         onClick={handleGoBack}

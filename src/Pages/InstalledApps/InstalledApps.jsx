@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useLoaderData } from "react-router-dom";
-import { getInstalledApps, addInstalledApp, removeInstalledApp } from "../../Utility/installedAppsDB.js";
+import { getInstalledApps, addInstalledApp, removeInstalledApp } from "../../Utils/installedAppsDB.js";
 import InstalledAppCard from "../InstalledAppCard/InstalledAppCard.jsx";
 
 const InstalledApps = () => {
@@ -43,7 +43,7 @@ const InstalledApps = () => {
   };
 
   return (
-    <div className="max-w-3xl mx-auto px-4 py-8">
+    <div className="bg-gray-100 px-4 py-8">
       
       <div className="text-center mb-8">
         <h1 className="text-4xl font-extrabold text-gray-800">Your Installed Apps</h1>
@@ -54,7 +54,7 @@ const InstalledApps = () => {
       </div>
 
       
-      <div className="flex justify-between items-center mb-6">
+      <div className="flex  justify-between items-center mb-6">
         <h2 className="text-xl font-semibold text-gray-700">
           {installedApps.length} Apps Found
         </h2>

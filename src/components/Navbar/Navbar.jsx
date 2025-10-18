@@ -13,7 +13,7 @@ const Navbar = () => {
   ];
 
   const activeClass = ({ isActive }) =>
-    isActive ? "text-[#9063EC] underline font-semibold" : "text-black";
+    isActive ? "text-purple-700 underline font-semibold" : "text-black";
 
   return (
     <nav className="bg-base-100 px-4 py-3 shadow-md">
@@ -21,7 +21,7 @@ const Navbar = () => {
         
         <NavLink to="/" className="flex items-center gap-2">
           <img src={logo} alt="Logo" className="w-12 h-12" />
-          <h1 className="text-xl font-semibold text-[#9063EC]">HERO.IO</h1>
+          <h1 className="text-xl font-semibold text-purple-700">HERO.IO</h1>
         </NavLink>
 
         
@@ -40,7 +40,7 @@ const Navbar = () => {
           href="https://github.com/naznin-g"  
           target="_blank"
           rel="noopener noreferrer"
-          className="btn bg-[#844BEC] text-white flex items-center gap-2"
+          className="btn bg-purple-700 text-white flex items-center gap-2"
         >
           <FaGithub className="text-xl" />
           <span>Contribute</span>

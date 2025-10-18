@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getInstalledApps, addInstalledApp, removeInstalledApp } from "../../utility/installedAppsDB";
+import { getInstalledApps, addInstalledApp, removeInstalledApp } from "../../Utils/installedAppsDB.js";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid, ResponsiveContainer } from "recharts";
@@ -14,11 +14,11 @@ const AppDetails = () => {
   const [isInstalled, setIsInstalled] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
-  // Fetch data from JSON in public folder
+  
   useEffect(() => {
     const fetchAppData = async () => {
       try {
-        const res = await fetch("/data/appsData.json");
+        const res = await fetch("/appsData.json");
         const data = await res.json();
         const selectedApp = data.find((a) => a.id === parseInt(id));
         setApp(selectedApp);
@@ -79,33 +79,35 @@ const AppDetails = () => {
         <img className="w-48 h-48 object-cover rounded-2xl shadow-md" src={image} alt={title} />
         <div className="flex-1">
           <h2 className="text-3xl font-bold">{title}</h2>
-          <p className="text-gray-500">by {company}</p>
+          <p className="text-gray-500">Developed by <span className="text-purple-600"> {companyName}</span></p>
 
-          {/* Stats section */}
+          
           <div className="flex flex-wrap items-center gap-4 mt-3 text-gray-700">
-            <div className="flex items-center gap-2">
+            <div className="flex-col items-center gap-2">
               <img src={downloadIcon} alt="downloads" className="w-5 h-5" />
-              <span>{downloads.toLocaleString()} Downloads</span>
+              <p>Downloads</p>
+              <div className="font-bold text-2xl">{downloads.toLocaleString()} </div>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex-col items-center gap-2">
               <img src={avgRatingIcon} alt="rating" className="w-5 h-5" />
-              <span>Rating: {rating}</span>
+              <p>Average Rating</p>
+              <div className="font-bold text-2xl">{ratingAvg}</div>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex-col items-center gap-2">
               <img src={reviewIcon} alt="reviews" className="w-5 h-5" />
-              <span>{reviews} Reviews</span>
+             <p>Total Reviews</p>
+              <div className="font-bold text-2xl">{reviews}</div>
             </div>
-            <span className="text-sm text-gray-500">Size: {size}</span>
           </div>
 
-          {/* Buttons */}
+          
           <div className="mt-4">
             {!isInstalled ? (
               <button
                 onClick={handleInstall}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg transition"
+                className="bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded-lg transition"
               >
-                Install Now
+                Install Now {size} MB
               </button>
             ) : (
               <button
@@ -119,16 +121,16 @@ const AppDetails = () => {
         </div>
       </div>
 
-      {/* Rating Breakdown */}
+      {/* chart */}
       <div className="mt-10">
-        <h3 className="text-xl font-semibold mb-3">Rating Breakdown</h3>
+        <h3 className="text-xl font-semibold mb-3">Ratings</h3>
         <ResponsiveContainer width="100%" height={250}>
           <BarChart layout="vertical" data={ratingBreakdownData}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis type="number" />
             <YAxis dataKey="star" type="category" />
             <Tooltip />
-            <Bar dataKey="count" fill="#4F46E5" />
+            <Bar dataKey="count" fill="#FFA52F" />
           </BarChart>
         </ResponsiveContainer>
       </div>
